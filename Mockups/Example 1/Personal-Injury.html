@@ -1,0 +1,2042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personal Injury | RLF Law</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        /* =====================================================
+           VARIABLES
+        ===================================================== */
+
+        :root {
+            --navy: #07131f;
+            --navy-light: #0d2130;
+            --gold: #c5a46d;
+            --gold-light: #dfc895;
+            --cream: #f5f2eb;
+            --white: #ffffff;
+            --gray: #68727b;
+            --gray-light: #e5e1d8;
+            --border: rgba(7, 19, 31, .12);
+        }
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: var(--navy);
+            background: var(--cream);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        .navbar {
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            padding: 22px 5%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            color: white;
+
+            transition: all .3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(7, 19, 31, .97);
+
+            padding-top: 15px;
+            padding-bottom: 15px;
+
+            box-shadow: 0 10px 35px rgba(0,0,0,.18);
+        }
+
+        /* LOGO */
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+
+            line-height: 1;
+        }
+
+        .logo-main {
+            font-family: "Playfair Display", serif;
+
+            font-size: 27px;
+
+            letter-spacing: 4px;
+        }
+
+        .logo-sub {
+            font-size: 8px;
+
+            letter-spacing: 2.5px;
+
+            margin-top: 6px;
+
+            color: var(--gold-light);
+        }
+
+        /* NAVIGATION LINKS */
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+
+            gap: 32px;
+
+            font-size: 13px;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,.82);
+
+            transition: .2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-light);
+        }
+
+        .nav-button {
+            border: 1px solid var(--gold);
+
+            padding: 12px 19px;
+
+            color: white !important;
+        }
+
+        .nav-button:hover {
+            background: var(--gold);
+
+            color: var(--navy) !important;
+        }
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 90vh;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(7,19,31,.98) 0%,
+                    rgba(7,19,31,.92) 42%,
+                    rgba(7,19,31,.55) 72%,
+                    rgba(7,19,31,.22) 100%
+                ),
+                url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=2200&q=85");
+
+            background-size: cover;
+
+            background-position: center;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 150px 8% 100px;
+        }
+
+        .hero-content {
+            max-width: 820px;
+        }
+
+        .eyebrow {
+            color: var(--gold-light);
+
+            text-transform: uppercase;
+
+            letter-spacing: 4px;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(55px, 7vw, 94px);
+
+            line-height: .98;
+
+            font-weight: 500;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 30px;
+        }
+
+        .hero-description {
+            max-width: 630px;
+
+            color: rgba(255,255,255,.74);
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            margin-bottom: 38px;
+        }
+
+        /* BUTTONS */
+
+        .hero-buttons {
+            display: flex;
+
+            gap: 14px;
+
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 16px 27px;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: .5px;
+
+            transition: .25s ease;
+        }
+
+        .button-primary {
+            background: var(--gold);
+
+            color: var(--navy);
+        }
+
+        .button-primary:hover {
+            background: var(--gold-light);
+
+            transform: translateY(-2px);
+        }
+
+        .button-outline {
+            border: 1px solid rgba(255,255,255,.35);
+
+            color: white;
+        }
+
+        .button-outline:hover {
+            background: white;
+
+            color: var(--navy);
+        }
+
+        /* =====================================================
+           TRUST BAR
+        ===================================================== */
+
+        .trust-bar {
+            background: var(--navy-light);
+
+            color: white;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            padding: 34px 8%;
+        }
+
+        .trust-item {
+            padding: 8px 28px;
+
+            border-right:
+                1px solid rgba(255,255,255,.12);
+        }
+
+        .trust-item:first-child {
+            padding-left: 0;
+        }
+
+        .trust-item:last-child {
+            border-right: none;
+        }
+
+        .trust-number {
+            font-family: "Playfair Display", serif;
+
+            color: var(--gold-light);
+
+            font-size: 28px;
+
+            margin-bottom: 3px;
+        }
+
+        .trust-label {
+            color: rgba(255,255,255,.55);
+
+            font-size: 10px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+        }
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .intro {
+            background: white;
+
+            padding: 120px 8%;
+
+            display: grid;
+
+            grid-template-columns:
+                .8fr 1.2fr;
+
+            gap: 100px;
+
+            align-items: center;
+        }
+
+        .section-label {
+            color: var(--gold);
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            margin-bottom: 20px;
+        }
+
+        .intro h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(42px, 5vw, 64px);
+
+            line-height: 1.05;
+
+            font-weight: 500;
+
+            margin-bottom: 25px;
+        }
+
+        .intro-copy {
+            color: var(--gray);
+
+            font-size: 17px;
+
+            line-height: 1.9;
+        }
+
+        .intro-copy p + p {
+            margin-top: 22px;
+        }
+
+        /* =====================================================
+           CASE TYPES
+        ===================================================== */
+
+        .cases {
+            padding: 120px 8%;
+
+            background: var(--cream);
+        }
+
+        .cases-heading {
+            max-width: 700px;
+
+            margin-bottom: 55px;
+        }
+
+        .cases-heading h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(42px, 5vw, 64px);
+
+            font-weight: 500;
+
+            line-height: 1.05;
+
+            margin-bottom: 20px;
+        }
+
+        .cases-heading p {
+            color: var(--gray);
+
+            max-width: 580px;
+        }
+
+        /* CASE GRID */
+
+        .case-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 1px;
+
+            background: #d9d6cf;
+
+            border: 1px solid #d9d6cf;
+        }
+
+        /* CASE CARD */
+
+        .case-card {
+            background: white;
+
+            padding: 40px;
+
+            min-height: 260px;
+
+            position: relative;
+
+            transition: .3s ease;
+        }
+
+        .case-card:hover {
+            background: var(--navy);
+
+            color: white;
+        }
+
+        .case-number {
+            color: var(--gold);
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            font-weight: 700;
+
+            margin-bottom: 45px;
+        }
+
+        .case-card h3 {
+            font-family: "Playfair Display", serif;
+
+            font-size: 29px;
+
+            font-weight: 500;
+
+            margin-bottom: 12px;
+        }
+
+        .case-card p {
+            color: var(--gray);
+
+            font-size: 14px;
+
+            max-width: 500px;
+        }
+
+        .case-card:hover p {
+            color: rgba(255,255,255,.62);
+        }
+
+        .case-arrow {
+            position: absolute;
+
+            right: 35px;
+
+            bottom: 28px;
+
+            color: var(--gold);
+
+            font-size: 20px;
+        }
+
+        /* =====================================================
+           WHY US
+        ===================================================== */
+
+        .why-us {
+            background: white;
+
+            padding: 120px 8%;
+        }
+
+        .why-header {
+            text-align: center;
+
+            max-width: 750px;
+
+            margin: 0 auto 70px;
+        }
+
+        .why-header h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(42px, 5vw, 62px);
+
+            font-weight: 500;
+
+            line-height: 1.05;
+
+            margin-bottom: 20px;
+        }
+
+        .why-header p {
+            color: var(--gray);
+        }
+
+        /* WHY GRID */
+
+        .why-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 60px;
+        }
+
+        .why-item {
+            border-top:
+                1px solid var(--gray-light);
+
+            padding-top: 28px;
+        }
+
+        .why-number {
+            color: var(--gold);
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 25px;
+        }
+
+        .why-item h3 {
+            font-family: "Playfair Display", serif;
+
+            font-size: 28px;
+
+            font-weight: 500;
+
+            margin-bottom: 12px;
+        }
+
+        .why-item p {
+            color: var(--gray);
+
+            font-size: 14px;
+
+            line-height: 1.8;
+        }
+
+        /* =====================================================
+           PROCESS
+        ===================================================== */
+
+        .process {
+            background: var(--navy);
+
+            color: white;
+
+            padding: 120px 8%;
+        }
+
+        .process-heading {
+            max-width: 700px;
+
+            margin-bottom: 65px;
+        }
+
+        .process-heading .section-label {
+            color: var(--gold-light);
+        }
+
+        .process-heading h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(42px, 5vw, 62px);
+
+            font-weight: 500;
+
+            line-height: 1.05;
+
+            margin-bottom: 20px;
+        }
+
+        .process-heading p {
+            color: rgba(255,255,255,.6);
+        }
+
+        /* PROCESS GRID */
+
+        .process-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 0;
+        }
+
+        .process-step {
+            border-top:
+                1px solid rgba(255,255,255,.15);
+
+            padding: 30px 25px 0;
+
+            border-right:
+                1px solid rgba(255,255,255,.12);
+        }
+
+        .process-step:first-child {
+            padding-left: 0;
+        }
+
+        .process-step:last-child {
+            border-right: none;
+        }
+
+        .process-number {
+            color: var(--gold-light);
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 35px;
+        }
+
+        .process-step h3 {
+            font-family: "Playfair Display", serif;
+
+            font-size: 27px;
+
+            font-weight: 500;
+
+            margin-bottom: 12px;
+        }
+
+        .process-step p {
+            color: rgba(255,255,255,.55);
+
+            font-size: 13px;
+
+            line-height: 1.8;
+
+            padding-right: 20px;
+        }
+
+        /* =====================================================
+           RESULTS
+        ===================================================== */
+
+        .results {
+            padding: 120px 8%;
+
+            background: var(--cream);
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 100px;
+
+            align-items: center;
+        }
+
+        .results-copy h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(42px, 5vw, 62px);
+
+            font-weight: 500;
+
+            line-height: 1.05;
+
+            margin-bottom: 25px;
+        }
+
+        .results-copy p {
+            color: var(--gray);
+
+            max-width: 550px;
+
+            margin-bottom: 30px;
+        }
+
+        .result-list {
+            border-top:
+                1px solid #d5d1c8;
+        }
+
+        .result {
+            padding: 27px 0;
+
+            border-bottom:
+                1px solid #d5d1c8;
+        }
+
+        .result strong {
+            display: block;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 38px;
+
+            color: var(--navy);
+        }
+
+        .result span {
+            color: var(--gray);
+
+            font-size: 12px;
+        }
+
+        /* =====================================================
+           FAQ
+        ===================================================== */
+
+        .faq {
+            background: white;
+
+            padding: 120px 8%;
+        }
+
+        .faq-container {
+            max-width: 900px;
+
+            margin: auto;
+        }
+
+        .faq-header {
+            text-align: center;
+
+            margin-bottom: 60px;
+        }
+
+        .faq-header h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(42px, 5vw, 60px);
+
+            font-weight: 500;
+        }
+
+        .faq-item {
+            border-top:
+                1px solid var(--gray-light);
+        }
+
+        .faq-item:last-child {
+            border-bottom:
+                1px solid var(--gray-light);
+        }
+
+        .faq-question {
+            width: 100%;
+
+            border: none;
+
+            background: none;
+
+            padding: 25px 0;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            text-align: left;
+
+            cursor: pointer;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            color: var(--navy);
+        }
+
+        .faq-icon {
+            color: var(--gold);
+
+            font-size: 22px;
+
+            transition: transform .25s ease;
+        }
+
+        .faq-answer {
+            max-height: 0;
+
+            overflow: hidden;
+
+            transition: max-height .3s ease;
+        }
+
+        .faq-answer p {
+            color: var(--gray);
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+            padding: 0 50px 25px 0;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* =====================================================
+           CTA
+        ===================================================== */
+
+        .cta {
+            background: var(--navy);
+
+            color: white;
+
+            text-align: center;
+
+            padding: 120px 8%;
+        }
+
+        .cta .section-label {
+            color: var(--gold-light);
+        }
+
+        .cta h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(43px, 5vw, 66px);
+
+            line-height: 1.05;
+
+            font-weight: 500;
+
+            max-width: 850px;
+
+            margin: 0 auto 25px;
+        }
+
+        .cta p {
+            color: rgba(255,255,255,.6);
+
+            max-width: 570px;
+
+            margin: 0 auto 35px;
+        }
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: #040c14;
+
+            color: white;
+
+            padding: 70px 8% 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+
+            grid-template-columns:
+                1.5fr 1fr 1fr;
+
+            gap: 60px;
+
+            padding-bottom: 60px;
+        }
+
+        footer h3 {
+            font-family: "Playfair Display", serif;
+
+            font-size: 27px;
+
+            margin-bottom: 20px;
+        }
+
+        footer p,
+        footer a {
+            color: rgba(255,255,255,.52);
+
+            font-size: 14px;
+        }
+
+        footer a {
+            display: block;
+
+            margin-bottom: 9px;
+
+            transition: .2s;
+        }
+
+        footer a:hover {
+            color: var(--gold-light);
+        }
+
+        .footer-bottom {
+            border-top:
+                1px solid rgba(255,255,255,.1);
+
+            padding-top: 25px;
+
+            color: rgba(255,255,255,.32);
+
+            font-size: 11px;
+
+            display: flex;
+
+            justify-content: space-between;
+        }
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 950px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: 75vh;
+
+                padding-left: 7%;
+                padding-right: 7%;
+            }
+
+            .trust-bar {
+                grid-template-columns: repeat(2, 1fr);
+
+                gap: 25px;
+            }
+
+            .trust-item {
+                border-right: none;
+            }
+
+            .intro,
+            .results {
+                grid-template-columns: 1fr;
+
+                gap: 60px;
+
+                padding-left: 7%;
+                padding-right: 7%;
+            }
+
+            .cases,
+            .why-us,
+            .process,
+            .faq,
+            .cta {
+                padding-left: 7%;
+                padding-right: 7%;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+
+                gap: 35px;
+            }
+
+            .process-step {
+                border-right: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .hero {
+                min-height: 78vh;
+
+                padding-top: 140px;
+            }
+
+            .hero h1 {
+                font-size: 53px;
+
+                letter-spacing: -1.5px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .trust-bar {
+                grid-template-columns: 1fr 1fr;
+
+                padding: 30px 6%;
+            }
+
+            .trust-item {
+                padding: 8px;
+            }
+
+            .trust-item:first-child {
+                padding-left: 8px;
+            }
+
+            .intro,
+            .cases,
+            .why-us,
+            .process,
+            .results,
+            .faq,
+            .cta {
+                padding-top: 80px;
+
+                padding-bottom: 85px;
+            }
+
+            .case-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+            .process-step {
+                padding-left: 0;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+            .footer-bottom {
+                display: block;
+            }
+
+            .footer-bottom span {
+                display: block;
+
+                margin-bottom: 10px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVIGATION
+    ===================================================== -->
+
+    <header class="navbar" id="navbar">
+
+        <a href="Home.html" class="logo">
+
+            <span class="logo-main">
+                RLF
+            </span>
+
+            <span class="logo-sub">
+                LAW OFFICES
+            </span>
+
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="practice-areas.html">
+                Practice Areas
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="results.html">
+                Results
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a
+                href="contact.html"
+                class="nav-button"
+            >
+                Schedule a Consultation
+            </a>
+
+        </nav>
+
+    </header>
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Personal Injury
+            </div>
+
+            <h1>
+                When you've<br>
+                been injured,<br>
+                experience matters.
+            </h1>
+
+            <p class="hero-description">
+                Serious injuries can affect every part of your life.
+                We provide experienced legal representation focused on
+                protecting your rights and pursuing the compensation
+                you may be entitled to.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="contact.html"
+                    class="button button-primary"
+                >
+                    Schedule a Consultation
+                </a>
+
+                <a
+                    href="#how-we-help"
+                    class="button button-outline"
+                >
+                    How We Can Help
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+         TRUST BAR
+    ===================================================== -->
+
+    <section class="trust-bar">
+
+        <div class="trust-item">
+
+            <div class="trust-number">
+                30+
+            </div>
+
+            <div class="trust-label">
+                Years of Experience
+            </div>
+
+        </div>
+
+        <div class="trust-item">
+
+            <div class="trust-number">
+                24/7
+            </div>
+
+            <div class="trust-label">
+                Response Availability
+            </div>
+
+        </div>
+
+        <div class="trust-item">
+
+            <div class="trust-number">
+                1:1
+            </div>
+
+            <div class="trust-label">
+                Personal Attention
+            </div>
+
+        </div>
+
+        <div class="trust-item">
+
+            <div class="trust-number">
+                ES
+            </div>
+
+            <div class="trust-label">
+                Spanish Services
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+         INTRO
+    ===================================================== -->
+
+    <section
+        class="intro"
+        id="how-we-help"
+    >
+
+        <div>
+
+            <div class="section-label">
+                Personal Injury Representation
+            </div>
+
+            <h2>
+                Your recovery<br>
+                comes first.
+            </h2>
+
+        </div>
+
+        <div class="intro-copy">
+
+            <p>
+                An unexpected injury can create medical bills,
+                lost income, uncertainty and significant emotional
+                stress.
+            </p>
+
+            <p>
+                You shouldn't have to navigate the legal process
+                alone. Our team works to understand what happened,
+                identify the parties responsible and develop a
+                strategy tailored to your circumstances.
+            </p>
+
+            <p>
+                From the initial consultation through resolution,
+                we remain focused on protecting your interests and
+                helping you understand your legal options.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+         TYPES OF CASES
+    ===================================================== -->
+
+    <section class="cases">
+
+        <div class="cases-heading">
+
+            <div class="section-label">
+                Areas We Handle
+            </div>
+
+            <h2>
+                Injuries can happen
+                in many ways.
+            </h2>
+
+            <p>
+                Our personal injury practice addresses a range of
+                accident and injury matters.
+            </p>
+
+        </div>
+
+        <div class="case-grid">
+
+            <!-- AUTO -->
+
+            <article class="case-card">
+
+                <div class="case-number">
+                    01
+                </div>
+
+                <h3>
+                    Auto Accidents
+                </h3>
+
+                <p>
+                    Representation for individuals injured in
+                    automobile collisions, including cases involving
+                    serious injuries and disputed liability.
+                </p>
+
+                <span class="case-arrow">
+                    ↗
+                </span>
+
+            </article>
+
+            <!-- MOTORCYCLE -->
+
+            <article class="case-card">
+
+                <div class="case-number">
+                    02
+                </div>
+
+                <h3>
+                    Motorcycle Accidents
+                </h3>
+
+                <p>
+                    Legal advocacy for riders dealing with injuries,
+                    insurance disputes and the consequences of
+                    motorcycle collisions.
+                </p>
+
+                <span class="case-arrow">
+                    ↗
+                </span>
+
+            </article>
+
+            <!-- TRUCK -->
+
+            <article class="case-card">
+
+                <div class="case-number">
+                    03
+                </div>
+
+                <h3>
+                    Truck Accidents
+                </h3>
+
+                <p>
+                    Complex representation involving commercial
+                    vehicles, serious injuries and potentially
+                    multiple responsible parties.
+                </p>
+
+                <span class="case-arrow">
+                    ↗
+                </span>
+
+            </article>
+
+            <!-- SERIOUS INJURY -->
+
+            <article class="case-card">
+
+                <div class="case-number">
+                    04
+                </div>
+
+                <h3>
+                    Serious Injuries
+                </h3>
+
+                <p>
+                    Advocacy for clients facing significant physical,
+                    financial and personal consequences following
+                    an accident.
+                </p>
+
+                <span class="case-arrow">
+                    ↗
+                </span>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+         WHY RLF
+    ===================================================== -->
+
+    <section class="why-us">
+
+        <div class="why-header">
+
+            <div class="section-label">
+                Why Choose RLF
+            </div>
+
+            <h2>
+                A strategic approach
+                to your case.
+            </h2>
+
+            <p>
+                Every case deserves individual attention,
+                careful preparation and experienced advocacy.
+            </p>
+
+        </div>
+
+        <div class="why-grid">
+
+            <article class="why-item">
+
+                <div class="why-number">
+                    01
+                </div>
+
+                <h3>
+                    Experience
+                </h3>
+
+                <p>
+                    Years of legal experience allow our team to
+                    understand the complexities that can arise
+                    in personal injury matters.
+                </p>
+
+            </article>
+
+            <article class="why-item">
+
+                <div class="why-number">
+                    02
+                </div>
+
+                <h3>
+                    Personal Attention
+                </h3>
+
+                <p>
+                    We take the time to understand your situation,
+                    answer your questions and keep you informed
+                    throughout the process.
+                </p>
+
+            </article>
+
+            <article class="why-item">
+
+                <div class="why-number">
+                    03
+                </div>
+
+                <h3>
+                    Strategic Advocacy
+                </h3>
+
+                <p>
+                    We evaluate the facts, identify the strongest
+                    legal strategy and work toward the best possible
+                    outcome for your circumstances.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+         PROCESS
+    ===================================================== -->
+
+    <section class="process">
+
+        <div class="process-heading">
+
+            <div class="section-label">
+                Our Approach
+            </div>
+
+            <h2>
+                From consultation
+                to resolution.
+            </h2>
+
+            <p>
+                We guide clients through each stage of the legal
+                process with clear communication and focused advocacy.
+            </p>
+
+        </div>
+
+        <div class="process-grid">
+
+            <article class="process-step">
+
+                <div class="process-number">
+                    STEP 01
+                </div>
+
+                <h3>
+                    Listen
+                </h3>
+
+                <p>
+                    We begin by understanding what happened,
+                    what you've experienced and what matters
+                    most to you.
+                </p>
+
+            </article>
+
+            <article class="process-step">
+
+                <div class="process-number">
+                    STEP 02
+                </div>
+
+                <h3>
+                    Evaluate
+                </h3>
+
+                <p>
+                    We examine the facts, available evidence,
+                    potential claims and the circumstances
+                    surrounding your injury.
+                </p>
+
+            </article>
+
+            <article class="process-step">
+
+                <div class="process-number">
+                    STEP 03
+                </div>
+
+                <h3>
+                    Strategize
+                </h3>
+
+                <p>
+                    We develop a legal strategy based on your
+                    circumstances and the objectives you want
+                    to achieve.
+                </p>
+
+            </article>
+
+            <article class="process-step">
+
+                <div class="process-number">
+                    STEP 04
+                </div>
+
+                <h3>
+                    Advocate
+                </h3>
+
+                <p>
+                    We advocate for your interests throughout
+                    negotiations, litigation or resolution of
+                    your matter.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+         RESULTS
+    ===================================================== -->
+
+    <section class="results">
+
+        <div class="results-copy">
+
+            <div class="section-label">
+                Results Matter
+            </div>
+
+            <h2>
+                Experience you can
+                put to work.
+            </h2>
+
+            <p>
+                Our firm's experience includes representing clients
+                in significant and complex legal matters. Past results
+                do not guarantee future outcomes, and each case is
+                different.
+            </p>
+
+            <a
+                href="results.html"
+                class="button button-primary"
+            >
+                View Our Results
+            </a>
+
+        </div>
+
+        <div class="result-list">
+
+            <div class="result">
+
+                <strong>
+                    $6.9M
+                </strong>
+
+                <span>
+                    Notable Award
+                </span>
+
+            </div>
+
+            <div class="result">
+
+                <strong>
+                    30+
+                </strong>
+
+                <span>
+                    Years of Legal Experience
+                </span>
+
+            </div>
+
+            <div class="result">
+
+                <strong>
+                    1:1
+                </strong>
+
+                <span>
+                    Personalized Client Attention
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+         FAQ
+    ===================================================== -->
+
+    <section class="faq">
+
+        <div class="faq-container">
+
+            <div class="faq-header">
+
+                <div class="section-label">
+                    Frequently Asked Questions
+                </div>
+
+                <h2>
+                    Common questions.
+                </h2>
+
+            </div>
+
+            <!-- FAQ 1 -->
+
+            <div class="faq-item">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                >
+
+                    <span>
+                        What should I do after an accident?
+                    </span>
+
+                    <span class="faq-icon">
+                        +
+                    </span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Seek appropriate medical attention, document
+                        what happened when possible, preserve relevant
+                        information and consider speaking with an
+                        attorney about your circumstances.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- FAQ 2 -->
+
+            <div class="faq-item">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                >
+
+                    <span>
+                        How do I know if I have a personal injury case?
+                    </span>
+
+                    <span class="faq-icon">
+                        +
+                    </span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Every situation is different. A consultation
+                        can help determine what legal claims may be
+                        available based on the facts and circumstances
+                        of your injury.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- FAQ 3 -->
+
+            <div class="faq-item">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                >
+
+                    <span>
+                        How much does a consultation cost?
+                    </span>
+
+                    <span class="faq-icon">
+                        +
+                    </span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Contact our office to discuss your situation
+                        and learn more about the consultation process
+                        and any applicable fees.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- FAQ 4 -->
+
+            <div class="faq-item">
+
+                <button
+                    class="faq-question"
+                    type="button"
+                >
+
+                    <span>
+                        How long do personal injury cases take?
+                    </span>
+
+                    <span class="faq-icon">
+                        +
+                    </span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        The timeline depends on the circumstances of
+                        each matter, including the nature of the
+                        injuries, available evidence, negotiations
+                        and whether litigation becomes necessary.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================================
+         CTA
+    ===================================================== -->
+
+    <section class="cta">
+
+        <div class="section-label">
+            Take the Next Step
+        </div>
+
+        <h2>
+            You don't have to
+            navigate this alone.
+        </h2>
+
+        <p>
+            Tell us what happened and let our team help you understand
+            your legal options.
+        </p>
+
+        <a
+            href="contact.html"
+            class="button button-primary"
+        >
+            Schedule a Consultation
+        </a>
+
+    </section>
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>
+                    RLF
+                </h3>
+
+                <p>
+                    Law Offices of Richard L. Francis
+                    and Associates.
+                </p>
+
+                <br>
+
+                <p>
+                    Experienced legal representation
+                    focused on protecting our clients'
+                    interests.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    Practice Areas
+                </h3>
+
+                <a href="personal-injury.html">
+                    Personal Injury
+                </a>
+
+                <a href="bankruptcy.html">
+                    Bankruptcy
+                </a>
+
+                <a href="labor-law.html">
+                    Labor Law
+                </a>
+
+                <a href="real-estate.html">
+                    Real Estate
+                </a>
+
+                <a href="trust-litigation.html">
+                    Trust Litigation
+                </a>
+
+                <a href="environmental-law.html">
+                    Environmental Law
+                </a>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    805-485-8888
+                </p>
+
+                <br>
+
+                <p>
+                    Heritage Square<br>
+                    Downtown Oxnard
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Richard L. Francis & Associates
+            </span>
+
+            <span>
+                Privacy Policy · Disclaimer
+            </span>
+
+        </div>
+
+    </footer>
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+
+    <script>
+
+        /* -----------------------------------------------------
+           NAVBAR
+        ----------------------------------------------------- */
+
+        const navbar =
+            document.getElementById("navbar");
+
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 50) {
+
+                navbar.classList.add("scrolled");
+
+            } else {
+
+                navbar.classList.remove("scrolled");
+
+            }
+
+        });
+
+        /* -----------------------------------------------------
+           FAQ ACCORDION
+        ----------------------------------------------------- */
+
+        const faqItems =
+            document.querySelectorAll(".faq-item");
+
+        faqItems.forEach(item => {
+
+            const question =
+                item.querySelector(".faq-question");
+
+            const answer =
+                item.querySelector(".faq-answer");
+
+            question.addEventListener("click", () => {
+
+                const isActive =
+                    item.classList.contains("active");
+
+                /* Close all */
+
+                faqItems.forEach(otherItem => {
+
+                    otherItem.classList.remove("active");
+
+                    const otherAnswer =
+                        otherItem.querySelector(".faq-answer");
+
+                    otherAnswer.style.maxHeight = null;
+
+                });
+
+                /* Open selected */
+
+                if (!isActive) {
+
+                    item.classList.add("active");
+
+                    answer.style.maxHeight =
+                        answer.scrollHeight + "px";
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mockup B | Law Offices of Richard L. Francis and Associates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f8f9;--surface:#fff;--text:#10242b;--muted:#4d6169;--border:#d5dfe3;--teal:#0c4a5a;--teal2:#12606f;--amber:#f2b134;--amber-ink:#2f2000;--slot:#e4ecef;--slot-line:#8aa3ab;--link:#0c4a5a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1a1f;--surface:#12262d;--text:#e6eef0;--muted:#a2b5bb;--border:#27404a;--slot:#1a3640;--slot-line:#58808c;--link:#f2c260}}
+:root[data-theme="dark"]{--bg:#0b1a1f;--surface:#12262d;--text:#e6eef0;--muted:#a2b5bb;--border:#27404a;--slot:#1a3640;--slot-line:#58808c;--link:#f2c260}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.6 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,system-ui,sans-serif;font-weight:700;line-height:1.1;margin:0;letter-spacing:-.015em}
+a{color:inherit}.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.top{background:#071f27;color:#cfe0e5;font-size:13px;padding:7px 0;text-align:center}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--surface);border-bottom:1px solid var(--border)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:66px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font:700 16px/1.2 "Bricolage Grotesque",sans-serif}
+.brand small{display:block;font:400 12px Figtree,sans-serif;color:var(--muted)}
+nav{display:flex;gap:22px;font-size:15px;font-weight:500}nav a{text-decoration:none;padding:6px 0}nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-block;padding:12px 20px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;border:2px solid transparent}
+.btn-a{background:var(--amber);color:var(--amber-ink)}.btn-o{border-color:#fff;color:#fff}.btn-t{background:var(--teal);color:#fff}
+.img{position:relative;background:repeating-linear-gradient(45deg,transparent 0 12px,rgba(12,74,90,.07) 12px 24px),var(--slot);border:2px dashed var(--slot-line);color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:12px;font-size:13px;line-height:1.35}
+.img b{font:700 13px "Bricolage Grotesque",sans-serif;color:var(--text);margin-bottom:2px}
+.hero{position:relative;color:#fff;min-height:560px;background:repeating-linear-gradient(45deg,transparent 0 12px,rgba(12,74,90,.1) 12px 24px),var(--slot);display:flex;align-items:center;overflow:hidden}
+.hero .img{position:absolute;inset:0;border:0;border-radius:0;justify-content:flex-end;align-items:flex-end;text-align:right}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,31,39,.94) 0%,rgba(7,31,39,.82) 48%,rgba(7,31,39,.45) 100%)}
+.hero-in{position:relative;z-index:2;padding-top:72px;padding-bottom:72px}
+.hero h1{font-size:clamp(36px,6vw,64px);max-width:13em}
+.hero p{font-size:19px;color:#d6e5ea;max-width:34em;margin:20px 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero .img{z-index:3;background-color:transparent;width:auto;inset:auto 16px 16px auto;max-width:300px;background:rgba(255,255,255,.9);border:2px dashed var(--slot-line);border-radius:8px}
+.trust{background:var(--teal);color:#fff}.trust .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-top:26px;padding-bottom:26px}
+.trust strong{display:block;font:700 24px "Bricolage Grotesque",sans-serif}.trust span{font-size:15px;color:#cfe5ea}
+section.s{padding:72px 0}.s h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:10px}.lead{color:var(--muted);max-width:40em;margin:0 0 32px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;overflow:hidden;text-decoration:none;display:block}
+.card .img{aspect-ratio:4/3;border-width:0 0 2px;border-radius:0}.card div.t{padding:18px}.card h3{font-size:20px;color:var(--link);margin-bottom:6px}.card p{margin:0;color:var(--muted);font-size:15px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}.split .img{aspect-ratio:4/3;border-radius:12px}
+.split p{color:var(--muted)}.split.rev .img{order:2}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.team .img{aspect-ratio:1/1;border-radius:12px;margin-bottom:12px}.team h3{font-size:20px}.team p{margin:2px 0 0;color:var(--muted);font-size:15px}
+.band{background:var(--teal);color:#fff;text-align:center}.band .wrap{padding-top:56px;padding-bottom:56px}.band p{color:#cfe5ea;margin:10px 0 24px}
+.list{background:var(--surface);border-top:1px solid var(--border)}.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}th{font-size:13px;color:var(--muted);font-weight:600}
+footer{padding:26px 0 40px;font-size:14px;color:var(--muted)}footer p{margin:0 0 6px;max-width:60em}
+.callbar{display:none}
+@media (max-width:860px){nav{display:none}.bar .btn{display:none}.hero{min-height:0}.hero .img{position:static;inset:auto;margin:0;max-width:none}.hero-in{padding-top:48px;padding-bottom:48px}
+.trust .wrap,.cards,.team{grid-template-columns:1fr}.split{grid-template-columns:1fr;gap:24px}.split.rev .img{order:0}section.s{padding:48px 0}
+.callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--amber);color:var(--amber-ink);justify-content:center;font-weight:600;text-decoration:none;padding:14px 16px calc(14px + env(safe-area-inset-bottom,0px))}body{padding-bottom:56px}}
+</style>
+</head>
+<body>
+<div class="top">Design mockup B. Dashed boxes are image slots; the numbered list at the bottom gives size and content for each.</div>
+<header><div class="wrap bar">
+<a class="brand" href="#top"><span class="img" style="width:96px;height:36px;padding:2px;font-size:11px"><b style="font-size:11px">IMAGE 13</b>Logo</span><span>Law Offices of Richard L. Francis<small>and Associates · Oxnard</small></span></a>
+<nav aria-label="Main"><a href="#areas">Practice areas</a><a href="#office">Office</a><a href="#team">Team</a><a href="#radio">Radio</a><a href="#contact">Contact</a></nav>
+<a class="btn btn-t" href="tel:8054858888">805-485-8888</a></div></header>
+
+<main id="top">
+<section class="hero"><div class="img"><b>IMAGE 1</b>Hero background<br>1920 × 900 px<br>Team photo or downtown Oxnard</div>
+<div class="wrap hero-in"><h1>Injured, in debt, or treated unfairly at work? We stand with you.</h1>
+<p>Oxnard attorneys handling injury, bankruptcy, labor, real estate, and trust cases across Ventura County. First consultation is free.</p>
+<div class="cta"><a class="btn btn-a" href="tel:8054858888">Call 805-485-8888</a><a class="btn btn-o" href="#contact">Free consultation</a></div></div></section>
+
+<div class="trust"><div class="wrap">
+<div><strong>$6.9 million</strong><span>Largest workers’ compensation award in Ventura County</span></div>
+<div><strong>Readers’ Choice</strong><span>Ventura County Star</span></div>
+<div><strong>Se habla español</strong><span>24-hour response team</span></div></div></div>
+
+<section class="s" id="areas"><div class="wrap"><h2>How we can help</h2><p class="lead">Pick the area closest to your situation.</p>
+<div class="cards">
+<a class="card" href="#contact"><div class="img"><b>IMAGE 2</b>800 × 600 px<br>Car or road scene</div><div class="t"><h3>Auto and motorcycle accidents</h3><p>We handle your injury claim, property damage, and your insurer.</p></div></a>
+<a class="card" href="#contact"><div class="img"><b>IMAGE 3</b>800 × 600 px<br>Family or candle, respectful tone</div><div class="t"><h3>Wrongful death</h3><p>Support for families after the loss of a loved one.</p></div></a>
+<a class="card" href="#contact"><div class="img"><b>IMAGE 4</b>800 × 600 px<br>Dog or park scene</div><div class="t"><h3>Dog bite injuries</h3><p>Compensation for medical costs and recovery.</p></div></a>
+<a class="card" href="#contact"><div class="img"><b>IMAGE 5</b>800 × 600 px<br>Home or documents</div><div class="t"><h3>Bankruptcy</h3><p>Chapter 7 and Chapter 13 options.</p></div></a>
+<a class="card" href="#contact"><div class="img"><b>IMAGE 6</b>800 × 600 px<br>Workers at work</div><div class="t"><h3>Labor law</h3><p>Single and class-action cases against unfair employers.</p></div></a>
+<a class="card" href="#contact"><div class="img"><b>IMAGE 7</b>800 × 600 px<br>Property or farmland</div><div class="t"><h3>Real estate and trust litigation</h3><p>Experienced counsel for families and communities.</p></div></a>
+</div></div></section>
+
+<section class="s" id="office" style="background:var(--surface);border-block:1px solid var(--border)"><div class="wrap split">
+<div class="img"><b>IMAGE 8</b>1200 × 900 px<br>Office building or reception, 711 South A Street</div>
+<div><h2>We come to you</h2><p>If you cannot travel, we meet you at the hospital or at home. Our open-door policy means you can reach your attorney directly.</p><p>711 South A Street, Oxnard, CA 93030</p><a class="btn btn-t" href="#contact">Plan your visit</a></div></div></section>
+
+<section class="s" id="team"><div class="wrap"><h2>Meet the team</h2><p class="lead">Serving Ventura County clients since 1976.</p>
+<div class="team">
+<div><div class="img"><b>IMAGE 9</b>600 × 600 px<br>Headshot</div><h3>Richard L. Francis</h3><p>Founding attorney</p></div>
+<div><div class="img"><b>IMAGE 10</b>600 × 600 px<br>Headshot</div><h3>Alta Manzo</h3><p>Attorney</p></div>
+<div><div class="img"><b>IMAGE 11</b>600 × 600 px<br>Headshot</div><h3>Juan Gonzalez</h3><p>Executive administrator</p></div>
+</div></div></section>
+
+<section class="s" id="radio" style="background:var(--surface);border-block:1px solid var(--border)"><div class="wrap split rev">
+<div class="img"><b>IMAGE 12</b>1000 × 700 px<br>Radio show host or studio</div>
+<div><h2>Hear us every week</h2><p>Our weekly radio show in Spanish answers common legal questions in your language.</p><a class="btn btn-t" href="#contact">Show details to confirm</a></div></div></section>
+
+<section class="band" id="contact"><div class="wrap"><h2>Talk to an attorney today</h2><p>Free consultation. English and Español.</p><a class="btn btn-a" href="tel:8054858888">Call 805-485-8888</a></div></section>
+
+</main>
+<footer><div class="wrap"><p>711 South A Street, Oxnard, CA 93030 · 805-485-8888</p><p>Attorney advertising. Past results do not guarantee a similar outcome. Final wording to be confirmed with the firm.</p></div></footer>
+<a class="callbar" href="tel:8054858888">Call 805-485-8888</a>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mockup | Law Offices of Richard L. Francis and Associates | Oxnard Injury, Bankruptcy and Labor Attorneys</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f7f6;--surface:#ffffff;--text:#16212c;--muted:#52606d;--border:#d8dee3;--navy:#12263f;--navy-2:#1b3a5c;--gold:#e0a526;--gold-ink:#3b2a00;--link:#12263f;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1620;--surface:#16212e;--text:#e8edf1;--muted:#a3b0bc;--border:#2a3a4b;--link:#f0c46a}}
+:root[data-theme="dark"]{--bg:#0e1620;--surface:#16212e;--text:#e8edf1;--muted:#a3b0bc;--border:#2a3a4b;--link:#f0c46a}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.6 "Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;font-weight:600;line-height:1.15;margin:0;letter-spacing:-.01em}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--navy);color:#fff;border-bottom:3px solid var(--gold)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.brand{font-family:"Source Serif 4",Georgia,serif;font-weight:600;font-size:17px;line-height:1.2;text-decoration:none}
+.brand small{display:block;font:400 12px "Public Sans",sans-serif;color:#b9c6d4}
+nav{display:flex;gap:22px;font-size:15px}
+nav a{text-decoration:none;color:#dbe4ec;padding:6px 0}
+nav a:hover,nav a:focus-visible{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-block;padding:12px 20px;border-radius:6px;font-weight:600;font-size:16px;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit}
+.btn-gold{background:var(--gold);color:var(--gold-ink)}
+.btn-gold:hover{background:#efb93f}
+.btn-line{border-color:#fff;color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.1)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 46px,rgba(255,255,255,.045) 46px 48px)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:48px;padding-top:72px;padding-bottom:72px;align-items:center}
+.hero h1{font-size:clamp(34px,5vw,54px)}
+.hero p.lead{font-size:19px;color:#d3dde7;max-width:34em;margin:20px 0 28px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero .note{margin-top:18px;font-size:15px;color:#b9c6d4}
+.card-consult{background:var(--surface);color:var(--text);border-radius:10px;padding:24px;border-top:5px solid var(--gold)}
+.card-consult h2{font-size:22px;margin-bottom:6px}
+.card-consult p{margin:0 0 14px;color:var(--muted);font-size:15px}
+label{display:block;font-size:14px;font-weight:500;margin:10px 0 4px}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--text);font:inherit;font-size:16px}
+textarea{min-height:84px;resize:vertical}
+.card-consult .btn{width:100%;margin-top:14px;text-align:center}
+.trust{background:var(--surface);border-bottom:1px solid var(--border)}
+.trust .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.trust div{padding:26px 24px;border-left:1px solid var(--border)}
+.trust div:first-child{border-left:0;padding-left:0}
+.trust strong{display:block;font-family:"Source Serif 4",Georgia,serif;font-size:26px;line-height:1.1;margin-bottom:6px}
+.trust span{font-size:15px;color:var(--muted)}
+section.block{padding:72px 0}
+.block h2{font-size:clamp(28px,3.4vw,38px);margin-bottom:12px}
+.block .intro{color:var(--muted);max-width:40em;margin:0 0 36px}
+.areas{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border);background:var(--surface)}
+.areas a{padding:26px 24px;text-decoration:none;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.areas a:hover{background:var(--bg)}
+.areas h3{font-size:21px;margin-bottom:8px;color:var(--link)}
+.areas p{margin:0;color:var(--muted);font-size:15px}
+.steps{background:var(--surface);border-block:1px solid var(--border)}
+.steps ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:32px;counter-reset:s}
+.steps li{counter-increment:s;padding-top:18px;border-top:4px solid var(--gold)}
+.steps li::before{content:"Step " counter(s);display:block;font-size:14px;font-weight:600;color:var(--muted);margin-bottom:6px}
+.steps h3{font-size:21px;margin-bottom:6px}
+.steps p{margin:0;color:var(--muted);font-size:16px}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.person{display:flex;gap:16px;align-items:center}
+.avatar{flex:none;width:72px;height:72px;border-radius:50%;background:var(--navy-2);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Source Serif 4",Georgia,serif;font-size:24px}
+.person h3{font-size:19px}
+.person p{margin:2px 0 0;font-size:15px;color:var(--muted)}
+.contact{background:var(--navy);color:#fff}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding-top:72px;padding-bottom:72px}
+.contact h2{font-size:clamp(28px,3.4vw,38px);margin-bottom:14px}
+.contact dl{margin:24px 0 0;display:grid;gap:14px}
+.contact dt{font-size:14px;color:#b9c6d4}
+.contact dd{margin:0;font-size:19px}
+.contact dd a{color:#fff}
+.map{min-height:260px;border-radius:10px;border:1px solid #2f4c6d;background:repeating-linear-gradient(0deg,transparent 0 39px,#223f60 39px 40px),repeating-linear-gradient(90deg,transparent 0 39px,#223f60 39px 40px),#173352;display:flex;align-items:flex-end;padding:16px;color:#d3dde7;font-size:15px}
+footer{padding:28px 0 40px;color:var(--muted);font-size:14px}
+footer p{margin:0 0 8px;max-width:60em}
+.callbar{display:none}
+@media (max-width:860px){
+nav{display:none}
+.hero .wrap,.contact .wrap{grid-template-columns:1fr;gap:32px;padding-top:44px;padding-bottom:44px}
+.trust .wrap{grid-template-columns:1fr}
+.trust div{border-left:0;border-top:1px solid var(--border);padding:18px 0}
+.trust div:first-child{border-top:0}
+.areas,.team,.steps ol{grid-template-columns:1fr}
+section.block{padding:48px 0}
+.bar .btn{display:none}
+.callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--gold);color:var(--gold-ink);justify-content:center;align-items:center;gap:8px;font-weight:600;text-decoration:none;padding:14px 16px calc(14px + env(safe-area-inset-bottom,0px))}
+body{padding-bottom:56px}
+}
+
+[hidden]{display:none!important}
+.topbar{background:#0b1827;color:#d3dde7;font-size:13px;padding:8px 0}
+.topbar .wrap{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between}
+.tabs{display:flex;gap:6px}.tab{background:transparent;color:#d3dde7;border:1px solid #3a5272;border-radius:999px;padding:5px 14px;font:inherit;cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--gold);color:var(--gold-ink);border-color:var(--gold)}
+.radio{background:var(--gold);color:var(--gold-ink)}.radio .wrap{display:flex;flex-wrap:wrap;gap:6px 18px;padding-top:16px;padding-bottom:16px;align-items:center}
+.crumb{font-size:14px;color:#b9c6d4;margin:0 0 10px}
+.two{display:grid;grid-template-columns:1.6fr .8fr;gap:48px}
+.sk{display:block;height:11px;border-radius:6px;background:var(--border);margin:0 0 12px}.skb{margin-bottom:22px}
+.note2{font-size:14px;color:var(--muted);margin:0 0 16px;font-style:italic}
+details{border-bottom:1px solid var(--border);padding:14px 0}summary{cursor:pointer;font-weight:600}details div{padding-top:14px}
+.side{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;margin-bottom:16px}
+.side h3{font-size:19px;margin-bottom:10px}.side a:not(.btn){display:block;padding:7px 0;text-decoration:none;color:var(--link);border-top:1px solid var(--border)}
+.side.gold{border-top:5px solid var(--gold)}.side.gold p{color:var(--muted);font-size:15px}
+.det{display:grid;grid-template-columns:90px 1fr;gap:10px 16px;margin:22px 0}.det dt{color:var(--muted);font-size:15px}.det dd{margin:0}
+.mapx{min-height:200px;border-radius:10px;border:1px solid var(--border);background:repeating-linear-gradient(0deg,transparent 0 39px,var(--border) 39px 40px),repeating-linear-gradient(90deg,transparent 0 39px,var(--border) 39px 40px),var(--surface);display:flex;align-items:flex-end;padding:14px;color:var(--muted);font-size:14px}
+@media (max-width:860px){.two{grid-template-columns:1fr;gap:28px}}
+</style></head><body><div class="topbar"><div class="wrap"><span>Design mockup for lawrlf.com. Photos and some text are placeholders; page text will be the firm's current text.</span><div class="tabs" role="group" aria-label="Mockup screens"><button class="tab" data-go="home" aria-pressed="true">Home</button><button class="tab" data-go="service" aria-pressed="false">Practice area page</button><button class="tab" data-go="contact" aria-pressed="false">Contact page</button></div></div></div><header>
+<div class="wrap bar">
+<a class="brand" href="#" data-go="home">Law Offices of Richard L. Francis<small>and Associates · Oxnard, California</small></a>
+<nav aria-label="Main"><a href="#" data-go="home">Home</a><a href="#" data-go="service">Practice areas</a><a href="#" data-go="contact">Contact</a></nav>
+<a class="btn btn-gold" href="tel:8054858888">Call 805-485-8888</a>
+</div>
+</header><main><div class="view" id="v-home">
+<div class="hero">
+<div class="wrap">
+<div>
+<h1>Injured, buried in debt, or treated unfairly at work? We fight for your result.</h1>
+<p class="lead">For years, our Oxnard attorneys have won injury, labor, and real estate cases across Ventura County, including the largest workers’ compensation award in the county’s history.</p>
+<div class="cta">
+<a class="btn btn-gold" href="tel:8054858888">Call 805-485-8888</a>
+<a class="btn btn-line" href="#" data-go="contact">Request a free consultation</a>
+</div>
+<p class="note">24-hour response team · Se habla español · Credit cards accepted</p>
+</div>
+<form class="card-consult" aria-label="Free consultation request" onsubmit="return false">
+<h2>Tell us what happened</h2>
+<p>Your first consultation is free.</p>
+<label for="n1">Name</label><input id="n1" type="text" autocomplete="name">
+<label for="p1">Phone or email</label><input id="p1" type="text" autocomplete="tel">
+<label for="c1">Type of case</label>
+<select id="c1"><option>Car or motorcycle accident</option><option>Wrongful death</option><option>Bankruptcy</option><option>Labor law</option><option>Real estate or environmental</option><option>Trust litigation</option></select>
+<button class="btn btn-gold" type="button">Send my request</button>
+</form>
+</div>
+</div>
+
+<div class="trust">
+<div class="wrap">
+<div><strong>$6.9 million</strong><span>Largest workers’ compensation award ever in Ventura County</span></div>
+<div><strong>Readers’ Choice</strong><span>Favorite lawyer, voted by readers of the Ventura County Star</span></div>
+<div><strong>SOAR initiative</strong><span>Co-authored by our founder to protect local farmland</span></div>
+</div>
+</div>
+
+<section class="block" id="areas">
+<div class="wrap">
+<h2>How we can help</h2>
+<p class="intro">Every case is different, so we tailor our work to your goals. Choose the area closest to your situation.</p>
+<div class="areas">
+<a href="#" data-go="service"><h3>Auto and motorcycle accidents</h3><p>We handle your injury claim, your property damage claim, and your insurer.</p></a>
+<a href="#" data-go="contact"><h3>Wrongful death</h3><p>Support for families after the loss of a loved one.</p></a>
+<a href="#" data-go="contact"><h3>Dog bite injuries</h3><p>Compensation for medical costs and recovery.</p></a>
+<a href="#" data-go="contact"><h3>Bankruptcy</h3><p>Chapter 7 and Chapter 13 options to eliminate unsecured debt and, in many cases, a second home loan.</p></a>
+<a href="#" data-go="contact"><h3>Labor law</h3><p>Single and class-action cases against unfair employers.</p></a>
+<a href="#" data-go="contact"><h3>Real estate, environmental, and trust litigation</h3><p>Experienced counsel for families, individuals, and communities.</p></a>
+</div>
+</div>
+</section>
+
+<section class="block steps" id="process">
+<div class="wrap">
+<h2>After a car accident, we do the paperwork</h2>
+<p class="intro">Here’s all we need from you.</p>
+<ol>
+<li><h3>Call us</h3><p>Free consultation, with a response team available 24 hours.</p></li>
+<li><h3>Send two documents</h3><p>A copy of your insurance policy and one property damage estimate.</p></li>
+<li><h3>Follow your doctor’s advice</h3><p>We file and manage your claims and deal with your insurer.</p></li>
+</ol>
+</div>
+</section>
+
+<section class="block" id="team">
+<div class="wrap">
+<h2>Our team</h2>
+<p class="intro">Our office is in downtown Oxnard.</p>
+<div class="team">
+<div class="person"><div class="avatar" aria-hidden="true">RF</div><div><h3>Richard L. Francis</h3><p>Founding attorney</p></div></div>
+<div class="person"><div class="avatar" aria-hidden="true">AM</div><div><h3>Alta Manzo</h3><p>Attorney</p></div></div>
+<div class="person"><div class="avatar" aria-hidden="true">JG</div><div><h3>Juan Gonzalez</h3><p>Executive administrator</p></div></div>
+</div>
+</div>
+</section>
+
+<div class="radio"><div class="wrap"><strong>On the air every week</strong><span>Our weekly radio show in Spanish: legal questions answered in your language.</span></div></div><section class="contact" id="contact">
+<div class="wrap">
+<div>
+<h2>Talk to an attorney today</h2>
+<p>Call or write. We offer free initial consultations and answer in English and Spanish.</p>
+<dl>
+<div><dt>Phone</dt><dd><a href="tel:8054858888">805-485-8888</a></dd></div>
+<div><dt>Office</dt><dd>711 South A Street, Oxnard, CA 93030</dd></div>
+<div><dt>Languages</dt><dd>English, Español</dd></div>
+</dl>
+</div>
+<div class="map" role="img" aria-label="Map placeholder for the Oxnard office">Map: 711 South A Street, Oxnard</div>
+</div>
+</section>
+</div><div class="view" id="v-service" hidden><div class="hero"><div class="wrap"><div><p class="crumb">Practice areas / Auto and motorcycle accidents</p><h1>Auto and motorcycle accident attorneys in Oxnard</h1><p class="lead">We handle your injury claim, your property damage claim, and your insurer, so you can focus on recovering.</p><div class="cta"><a class="btn btn-gold" href="tel:8054858888">Call 805-485-8888</a><a class="btn btn-line" href="#" data-go="contact">Free consultation</a></div></div><form class="card-consult" aria-label="Free consultation request" onsubmit="return false"><h2>Tell us what happened</h2><p>Your first consultation is free.</p><label>Name</label><input type="text"><label>Phone or email</label><input type="text"><label>Message</label><textarea></textarea><button class="btn btn-gold" type="button">Send my request</button></form></div></div>
+<section class="block"><div class="wrap two"><article><h2>What we do for you</h2><p class="note2">Existing page text from lawrlf.com goes here, unchanged.</p><div class="skb"><i class="sk" style="width:98%"></i><i class="sk" style="width:94%"></i><i class="sk" style="width:97%"></i><i class="sk" style="width:70%"></i></div><div class="skb"><i class="sk" style="width:96%"></i><i class="sk" style="width:99%"></i><i class="sk" style="width:92%"></i><i class="sk" style="width:55%"></i></div><h2 style="margin-top:36px">Frequently asked questions</h2><details><summary>Question 1 from the current FAQ</summary><div><i class="sk" style="width:96%"></i><i class="sk" style="width:90%"></i><i class="sk" style="width:60%"></i></div></details><details><summary>Question 2 from the current FAQ</summary><div><i class="sk" style="width:96%"></i><i class="sk" style="width:90%"></i><i class="sk" style="width:60%"></i></div></details><details><summary>Question 3 from the current FAQ</summary><div><i class="sk" style="width:96%"></i><i class="sk" style="width:90%"></i><i class="sk" style="width:60%"></i></div></details></article>
+<aside><div class="side"><h3>Other practice areas</h3><a href="#" data-go="home">Wrongful death</a><a href="#" data-go="home">Dog bite injuries</a><a href="#" data-go="home">Bankruptcy</a><a href="#" data-go="home">Labor law</a><a href="#" data-go="home">Real estate</a></div><div class="side gold"><h3>Hurt in an accident?</h3><p>Free consultation. 24-hour response team.</p><a class="btn btn-gold" href="tel:8054858888">805-485-8888</a></div></aside></div></section></div><div class="view" id="v-contact" hidden><div class="hero"><div class="wrap" style="padding-top:48px;padding-bottom:48px"><div><h1>Contact us</h1><p class="lead">Call or write. Your first consultation is free, in English or Spanish.</p></div></div></div>
+<section class="block"><div class="wrap two"><div><h2>Law Offices of Richard L. Francis and Associates</h2><dl class="det"><dt>Phone</dt><dd><a href="tel:8054858888">805-485-8888</a></dd><dt>Office</dt><dd>711 South A Street, Oxnard, CA 93030</dd><dt>Hours</dt><dd>To be confirmed with the firm</dd><dt>Languages</dt><dd>English, Español</dd></dl><div class="mapx" role="img" aria-label="Map placeholder">Map: 711 South A Street, Oxnard</div></div><div><form class="card-consult" aria-label="Free consultation request" onsubmit="return false"><h2>Tell us what happened</h2><p>Your first consultation is free.</p><label>Name</label><input type="text"><label>Phone or email</label><input type="text"><label>Message</label><textarea></textarea><button class="btn btn-gold" type="button">Send my request</button></form></div></div></section></div></main><footer>
+<div class="wrap">
+<p>© Law Offices of Richard L. Francis and Associates. Practice areas: personal injury, bankruptcy, labor law, real estate and environmental law, and trust litigation.</p>
+<p>711 South A Street, Oxnard, CA 93030 · 805-485-8888</p><p>Attorney advertising. Past results do not guarantee a similar outcome. Final wording to be confirmed with the firm.</p>
+</div>
+</footer><a class="callbar" href="tel:8054858888">Call 805-485-8888</a><script>
+function show(k){var m={home:'v-home',service:'v-service',contact:'v-contact'};Object.keys(m).forEach(function(x){document.getElementById(m[x]).hidden=(x!==k)});document.querySelectorAll('.tab').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.go===k)});window.scrollTo(0,0)}
+document.addEventListener('click',function(e){var t=e.target.closest('[data-go]');if(t){e.preventDefault();show(t.dataset.go)}});
+</script></body></html>

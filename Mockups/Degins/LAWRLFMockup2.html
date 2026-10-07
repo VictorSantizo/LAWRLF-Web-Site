@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mockup - Law Offices of Richard L. Francis and Associates</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0B1A30;
+      --secondary: #C99700;
+      --accent: #E5A900;
+      --bg-light: #F8FAFC;
+      --text-dark: #1E293B;
+      --text-muted: #64748B;
+      --white: #FFFFFF;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-dark); background-color: var(--bg-light); line-height: 1.6; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+    /* Top Bar */
+    .top-bar { background-color: var(--primary); color: var(--white); padding: 8px 5%; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .top-bar a { color: var(--secondary); text-decoration: none; font-weight: 600; }
+    .lang-switch { background: rgba(255,255,255,0.15); padding: 3px 10px; border-radius: 4px; font-weight: 600; font-size: 0.8rem; }
+
+    /* Header / Nav */
+    header { background: var(--white); padding: 18px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.05); sticky: top; }
+    .logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px; }
+    .logo span { color: var(--secondary); display: block; font-size: 0.75rem; font-family: 'Plus Jakarta Sans'; font-weight: 500; letter-spacing: 1px; }
+    nav a { margin-left: 20px; text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+    nav a:hover { color: var(--secondary); }
+    .btn-nav { background: var(--secondary); color: var(--primary); padding: 10px 20px; border-radius: 6px; font-weight: 700 !important; text-decoration: none; margin-left: 25px; }
+
+    /* Hero Section */
+    .hero { background: linear-gradient(rgba(11, 26, 48, 0.88), rgba(11, 26, 48, 0.88)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1350&q=80') center/cover; color: var(--white); padding: 80px 5%; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; }
+    .hero-text h1 { font-size: 2.8rem; line-height: 1.2; margin-bottom: 20px; }
+    .hero-text p { font-size: 1.1rem; color: #CBD5E1; margin-bottom: 30px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(201, 151, 0, 0.2); border: 1px solid var(--secondary); color: var(--secondary); padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px; }
+
+    /* Form Card */
+    .hero-form { background: var(--white); color: var(--text-dark); padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+    .hero-form h3 { font-size: 1.4rem; color: var(--primary); margin-bottom: 8px; }
+    .hero-form p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px; }
+    .form-group { margin-bottom: 14px; }
+    .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid #CBD5E1; border-radius: 6px; font-size: 0.9rem; outline: none; }
+    .btn-submit { width: 100%; background: var(--primary); color: var(--white); border: none; padding: 14px; border-radius: 6px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: 0.3s; }
+    .btn-submit:hover { background: var(--secondary); color: var(--primary); }
+
+    /* Stats Bar */
+    .stats-bar { background: var(--white); margin: -40px 5% 0 5%; position: relative; z-index: 10; padding: 30px; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+    .stat-item h2 { font-size: 2.2rem; color: var(--secondary); font-weight: 700; }
+    .stat-item p { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; }
+
+    /* Practice Areas */
+    .section { padding: 80px 5%; }
+    .section-title { text-align: center; margin-bottom: 50px; }
+    .section-title h2 { font-size: 2.2rem; color: var(--primary); }
+    .section-title p { color: var(--text-muted); max-width: 600px; margin: 10px auto 0 auto; }
+    
+    .grid-areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+    .area-card { background: var(--white); padding: 30px; border-radius: 10px; border: 1px solid #E2E8F0; transition: 0.3s; }
+    .area-card:hover { transform: translateY(-5px); border-color: var(--secondary); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .area-card h3 { color: var(--primary); margin-bottom: 12px; font-size: 1.25rem; }
+    .area-card p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px; }
+    .area-card a { color: var(--secondary); font-weight: 700; text-decoration: none; font-size: 0.85rem; }
+
+    /* Footer */
+    footer { background: var(--primary); color: var(--white); padding: 40px 5% 20px 5%; text-align: center; font-size: 0.85rem; color: #94A3B8; }
+    footer p { margin-bottom: 10px; }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .stats-bar { grid-template-columns: 1fr 1fr; }
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div>📍 Heritage Square, Downtown Oxnard, CA | 🕒 24/7 Response Team</div>
+    <div>
+      📞 Call: <a href="tel:8054858888">805-485-8888</a> &nbsp;|&nbsp; 
+      <span class="lang-switch">🌐 English / Español</span>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header>
+    <div class="logo">
+      Law Offices of Richard L. Francis
+      <span>& ASSOCIATES • ATTORNEYS AT LAW</span>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Firm Overview</a>
+      <a href="#">Practice Areas</a>
+      <a href="#">Verdicts & Results</a>
+      <a href="#">FAQs</a>
+      <a href="#" class="btn-nav">Free Consultation</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="hero-badge">🏆 Ventura County Star Readers' Choice Favorite Lawyer</div>
+      <h1>Aggressive & Creative Legal Representation</h1>
+      <p>Over decades of proven legal results in Personal Injury, Bankruptcy, Labor Law, and Real Estate/Environmental Law across Ventura County.</p>
+    </div>
+
+    <!-- Quick Consultation Form -->
+    <div class="hero-form">
+      <h3>Free Case Evaluation</h3>
+      <p>Confidential & No Obligation. Speak directly with our team.</p>
+      <form onsubmit="event.preventDefault(); alert('Formulario de prueba en el mockup.');">
+        <div class="form-group">
+          <input type="text" placeholder="Your Full Name" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" placeholder="Phone Number" required>
+        </div>
+        <div class="form-group">
+          <select required>
+            <option value="">Select Legal Issue...</option>
+            <option>Personal Injury / Auto Accident</option>
+            <option>Bankruptcy (Chapter 7 / 13)</option>
+            <option>Labor & Employment Law</option>
+            <option>Real Estate & Environmental</option>
+            <option>Trust Litigation</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea rows="3" placeholder="Briefly describe your situation..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">REQUEST FREE CONSULTATION</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Key Statistics & Proven Track Record -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <h2>$6.9M</h2>
+      <p>LARGEST WORKERS' COMP AWARD IN VENTURA COUNTY</p>
+    </div>
+    <div class="stat-item">
+      <h2>7-Figure</h2>
+      <p>PERSONAL INJURY & REAL ESTATE SETTLEMENTS</p>
+    </div>
+    <div class="stat-item">
+      <h2>SOAR</h2>
+      <p>CO-AUTHOR OF HISTORIC LAND PROTECTION INITIATIVE</p>
+    </div>
+    <div class="stat-item">
+      <h2>100%</h2>
+      <p>SPANISH & ENGLISH FLUENT SERVICES</p>
+    </div>
+  </div>
+
+  <!-- Practice Areas Section: Asymmetric High-Impact Layout (English Version) -->
+  <section class="section" style="background-color: #F8FAFC; padding: 80px 5%;">
+    <div class="section-title" style="text-align: left; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+      <div>
+        <span style="color: var(--secondary); font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.85rem;">Legal Practice Areas</span>
+        <h2 style="font-size: 2.4rem; color: var(--primary); margin-top: 5px;">Our Core Practice Areas</h2>
+      </div>
+      <p style="color: var(--text-muted); max-width: 450px; font-size: 0.95rem; margin: 0;">Aggressive and experienced legal representation for complex disputes across Ventura County.</p>
+    </div>
+
+    <!-- Main Asymmetric Grid -->
+    <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 30px; align-items: stretch;">
+      
+      <!-- Left Column: FEATURED PRIMARY AREA -->
+      <div style="background: var(--primary); color: #ffffff; padding: 40px; border-radius: 14px; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(11,26,48,0.15);">
+        <div style="position: absolute; top: -20px; right: -20px; width: 150px; height: 150px; background: rgba(201, 151, 0, 0.1); border-radius: 50%; pointer-events: none;"></div>
+        
+        <div>
+          <span style="background: var(--secondary); color: var(--primary); font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px;">Primary Focus & Proven Results</span>
+          <h3 style="font-size: 2rem; color: #ffffff; margin: 20px 0 15px 0;">Personal Injury & Labor Law</h3>
+          <p style="color: #CBD5E1; font-size: 0.98rem; line-height: 1.6; margin-bottom: 25px;">
+            Specializing in auto accidents, truck collisions, and employment claims. We secured the largest Workers' Compensation award in Ventura County history (**$6.9 Million**), along with numerous seven-figure settlements.
+          </p>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 30px; background: rgba(255,255,255,0.05); padding: 18px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+            <div style="color: #E2E8F0; font-size: 0.88rem;">✔ Auto & Truck Accidents</div>
+            <div style="color: #E2E8F0; font-size: 0.88rem;">✔ $6.9M Workers' Comp Award</div>
+            <div style="color: #E2E8F0; font-size: 0.88rem;">✔ Wrongful Death Claims</div>
+            <div style="color: #E2E8F0; font-size: 0.88rem;">✔ Unfair Employers & Class Actions</div>
+          </div>
+        </div>
+
+        <a href="#" style="background: var(--secondary); color: var(--primary); text-align: center; padding: 14px; border-radius: 8px; font-weight: 700; text-decoration: none; display: block; transition: 0.3s; font-size: 0.95rem;">
+          EVALUATE MY CASE FOR FREE ➔
+        </a>
+      </div>
+
+      <!-- Right Column: 4 COMPACT PRACTICE AREAS (2x2 Grid) -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        
+        <!-- Bankruptcy -->
+        <div style="background: #ffffff; padding: 25px; border-radius: 12px; border: 1px solid #E2E8F0; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="color: var(--secondary); font-size: 1.4rem; margin-bottom: 10px;">⚖️</div>
+            <h4 style="color: var(--primary); font-size: 1.15rem; margin-bottom: 8px;">Bankruptcy Law</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.4;">Chapter 7 & 13 representation. Debt elimination and lien stripping for second mortgages.</p>
+          </div>
+          <a href="#" style="color: var(--primary); font-weight: 700; text-decoration: none; font-size: 0.82rem; margin-top: 15px; display: inline-block;">Learn More ➔</a>
+        </div>
+
+        <!-- Real Estate -->
+        <div style="background: #ffffff; padding: 25px; border-radius: 12px; border: 1px solid #E2E8F0; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="color: var(--secondary); font-size: 1.4rem; margin-bottom: 10px;">🏡</div>
+            <h4 style="color: var(--primary); font-size: 1.15rem; margin-bottom: 8px;">Real Estate & SOAR</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.4;">Real estate litigation and co-authors of the historic SOAR land preservation initiative.</p>
+          </div>
+          <a href="#" style="color: var(--primary); font-weight: 700; text-decoration: none; font-size: 0.82rem; margin-top: 15px; display: inline-block;">Learn More ➔</a>
+        </div>
+
+        <!-- Trust Litigation -->
+        <div style="background: #ffffff; padding: 25px; border-radius: 12px; border: 1px solid #E2E8F0; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="color: var(--secondary); font-size: 1.4rem; margin-bottom: 10px;">📜</div>
+            <h4 style="color: var(--primary); font-size: 1.15rem; margin-bottom: 8px;">Trust Litigation</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.4;">Resolving complex inheritance, trust, and beneficiary disputes across Ventura County.</p>
+          </div>
+          <a href="#" style="color: var(--primary); font-weight: 700; text-decoration: none; font-size: 0.82rem; margin-top: 15px; display: inline-block;">Learn More ➔</a>
+        </div>
+
+        <!-- Spanish Speaking Support -->
+        <div style="background: #FFFBEB; padding: 25px; border-radius: 12px; border: 1px solid #FDE68A; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="font-size: 1.4rem; margin-bottom: 10px;">🇲🇽</div>
+            <h4 style="color: #92400E; font-size: 1.15rem; margin-bottom: 8px;">Servicios en Español</h4>
+            <p style="color: #B45309; font-size: 0.85rem; line-height: 1.4;">100% fluent bilingual team available 24/7 for immediate case consultations.</p>
+          </div>
+          <a href="tel:8054858888" style="color: #92400E; font-weight: 800; text-decoration: none; font-size: 0.82rem; margin-top: 15px; display: inline-block;">Call 805-485-8888 ➔</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <p><strong>Law Offices of Richard L. Francis and Associates</strong></p>
+    <p>Heritage Square • Downtown Oxnard, California | Phone: (805) 485-8888</p>
+    <p style="margin-top: 15px; font-size: 0.75rem;">© 2026 Law Offices of Richard L. Francis and Associates. All Rights Reserved. Modernized Website Prototype.</p>
+  </footer>
+
+</body>
+</html>
